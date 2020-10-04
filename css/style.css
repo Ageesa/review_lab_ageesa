@@ -1,0 +1,161 @@
+
+body{
+ background-color: rgb(250, 230, 231);
+   display: block;
+   margin-top: 0;
+   color: grey;
+   font-family: Arial, Helvetica, sans-serif;
+   scroll-behavior: smooth;
+}
+header{
+    background-color: rgb(250, 230, 231);
+    width: 100%;
+    margin: 10px auto;
+    position: wrap;
+}
+ 
+    
+h1, h2, h3, h4{
+    color: indianred;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 1em;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px ;
+}
+.container {
+background-color: #ffffff;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+.logo {
+    font-size:100px;
+    text-align: center;
+    color:lightcoral;
+    margin-bottom: 20px;
+}
+a{
+    text-decoration: none;
+    color: indianred;
+    padding: 10px;
+}
+
+nav ul{
+    display:flex;
+    max-width: 1000px;
+    margin:0 auto;
+    padding-inline-start: 0;
+    }
+    nav ul li{
+        margin: 0 auto;
+        font-size: 15px;
+        color:indianred;
+        list-style: none;
+        justify-content: space-between;
+}
+a:hover{
+    background-color: white;
+    text-decoration: none;
+}
+a.active {
+    color: rebeccapurple;
+    background-color: white;
+    font-weight: bold;
+  }
+h1{
+    font-size: 3rem;
+    margin: 0 auto;
+}
+.rating-share{
+    display:inline-flex;
+    justify-content: space-between;
+    }
+.rating {
+       color: saddlebrown;
+       font-size: 1.25rem;
+       margin-bottom: 2rem;
+       margin-top: 1em;
+    }
+.rating-share  .fa fa-share-alt{
+    margin-top: 50px;
+}
+img{
+    width: 100%;
+}
+main{
+    margin: 10px 0px;
+}
+.sidebar{
+    position: sticky;
+    height: 100%;
+    width: auto;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+    padding: 10px;
+}
+.mini-nav{
+    display: inline-flex;
+    list-style: none; 
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+    padding-inline-start: 0;
+}
+
+@media screen and (min-width: 600px){  
+.main-grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: 0.10fr 0.10fr 1fr 0.5fr .25fr;
+    grid-template-areas: "sidebar about about" 
+                        "sidebar receipe receipe"
+                        "sidebar ingredient ingredient"
+                        "sidebar steps steps"
+                        "sidebar notes notes";
+                        font-size: 20px;
+                        
+                        }
+.sidebar{
+    grid-area: sidebar;
+    background-color: lavender;
+    position: relative;
+    height: 100%;
+    padding: 0;
+}
+
+.mini-nav {
+    display: block;
+	position: sticky;
+    top: 0;
+    margin-top: 20px;
+}
+.mini-nav li{
+    margin-bottom:10px;
+}
+
+.about{
+    background-color: lavender;
+    grid-area: about;
+}
+.receipe{
+    background-color: #ffffff;
+    grid-area: receipe;
+}
+.ingredients{
+background-color: #ffffff;
+grid-area: ingredient;
+}
+.steps{
+    background-color:#ffffff;
+    grid-area: steps;
+   
+}
+.notes{
+    background-color:lavender;
+    grid-area: notes;
+    padding-bottom: 40px;
+}
+}
