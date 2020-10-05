@@ -1,46 +1,35 @@
 
+:root
+{
+   --col-bg:  rgb(250, 230, 231);
+  --col-bg-on: indianred;
+  --font-text:grey;
+}
 body{
- background-color: rgb(250, 230, 231);
+ background-color:var(--col-bg);
    display: block;
    margin-top: 0;
-   color: grey;
+   color:var(--font-text);
    font-family: Arial, Helvetica, sans-serif;
    scroll-behavior: smooth;
 }
+
+/* HEADER */
 header{
-    background-color: rgb(250, 230, 231);
+    background-color:var(--col-bg);
     width: 100%;
     margin: 10px auto;
     position: wrap;
 }
- 
-    
-h1, h2, h3, h4{
-    color: indianred;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-left: 1em;
-}
-p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px ;
-}
-.container {
-background-color: #ffffff;
-    max-width: 1040px;
-    margin: 0 auto;
-    padding: 20px 20px;
-}
 .logo {
     font-size:100px;
     text-align: center;
-    color:lightcoral;
+    color:var(--col-bg-on);
     margin-bottom: 20px;
 }
-a{
-    text-decoration: none;
-    color: indianred;
-    padding: 10px;
-}
+    
+
+/*SITE NAV */
 
 nav ul{
     display:flex;
@@ -51,9 +40,14 @@ nav ul{
     nav ul li{
         margin: 0 auto;
         font-size: 15px;
-        color:indianred;
+        color: var(--col-bg-on);
         list-style: none;
         justify-content: space-between;
+}
+a{
+    text-decoration: none;
+    color:var(--col-bg-on);
+    padding: 10px;
 }
 a:hover{
     background-color: white;
@@ -64,6 +58,24 @@ a.active {
     background-color: white;
     font-weight: bold;
   }
+  /*TEXT STYLE */
+  h1, h2, h3, h4{
+    color: var(--col-bg-on);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 1em;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px ;
+}
+/* RECIPE SECTION OF PAGE */
+.container {
+background-color: #ffffff;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+
 h1{
     font-size: 3rem;
     margin: 0 auto;
@@ -81,12 +93,15 @@ h1{
 .rating-share  .fa fa-share-alt{
     margin-top: 50px;
 }
+/* HERO IMAGE */
 img{
     width: 100%;
 }
 main{
     margin: 10px 0px;
 }
+
+/* PAGE NAVIGATION SIDEBAR */
 .sidebar{
     position: sticky;
     height: 100%;
@@ -94,7 +109,6 @@ main{
     top: 0;
     z-index: 1000;
     background-color: white;
-    padding: 10px;
 }
 .mini-nav{
     display: inline-flex;
@@ -105,6 +119,38 @@ main{
     padding-inline-start: 0;
 }
 
+/* FOOTER STUFF */
+footer {
+    background-color: var(--col-bg-on);
+    display: block;
+    padding: 10px;
+}
+.contact-us-glossary{
+    display: block;
+    max-width: 1000px;
+    margin: 0 auto;
+  
+}
+.contact-us-glossary ul{
+    justify-content: space-around;
+}
+.contact-us-glossary ul li{
+list-style: none;
+justify-content: space-between;
+}
+.contact-us-glossary ul li a{
+    color: var(--col-bg);
+}
+
+
+
+/* MEDIA SCREEN */
+@media screen and (min-width: 400px){
+    .contact-us-glossary ul{
+        display:inline-flex;
+        justify-content: space-around;
+    }
+}
 @media screen and (min-width: 600px){  
 .main-grid{
     display: grid;
@@ -158,4 +204,5 @@ grid-area: ingredient;
     grid-area: notes;
     padding-bottom: 40px;
 }
+
 }
